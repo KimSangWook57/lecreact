@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # React 연습.
 
-+ 2023.01.26 : React 생성 및 .
++ 2023.01.26 : React 생성 및 자기소개 .
 + 2023.01.27 : 박스오피스 초안 작성.
 
 + 자기소개 호스팅 주소 : https://reactclock-15769.web.app
