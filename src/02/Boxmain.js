@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Boxmain = () => {
     const mvlist = [
     {"rnum":"1","rank":"1","rankInten":"0","rankOldAndNew":"OLD","movieCd":"20190808","movieNm":"교섭","openDt":"2023-01-18","salesAmt":"355906586","salesShare":"18.8","salesInten":"-147956429","salesChange":"-29.4","salesAcc":"12600296336","audiCnt":"36622","audiInten":"-23326","audiChange":"-38.9","audiAcc":"1234442","scrnCnt":"945","showCnt":"3700"},
@@ -12,15 +14,35 @@ const Boxmain = () => {
     {"rnum":"10","rank":"10","rankInten":"0","rankOldAndNew":"OLD","movieCd":"20229518","movieNm":"천룡팔부: 교봉전","openDt":"2023-01-25","salesAmt":"15848197","salesShare":"0.8","salesInten":"-3804460","salesChange":"-19.4","salesAcc":"48516954","audiCnt":"1754","audiInten":"-482","audiChange":"-21.6","audiAcc":"5202","scrnCnt":"259","showCnt":"393"}
 ];
 
+    let [dspmv, setDspmv] = useState({});
+
+    // 클릭하면 실행되는 함수.
+    // 전개연산자 ...으로 자료를 하나씩 꺼내서 배열에 다시 집어넣어 준다.
+    const handleDivClick = (selmv) => {
+        setDspmv({...selmv});
+        console.log(selmv)
+    }    
+
     // push를 10번 넣을 배열.
     let divTags = [];
+
     for(let mv of mvlist) {
+        let inten = '-' ;
+        if (mv.rankInten > 0) {
+            inten = <span className="spup">{ "▲" + mv.rankInten }</span>;
+        }
+        else if (mv.rankInten < 0) {
+            inten = <span className="spdown">{ "▼" + -(mv.rankInten) }</span>;
+        }
+
         divTags.push(
-            <div className="rowDiv">
+            // 키 설정을 위해 유일한 값인 영화 cd값을 넣어주었다.
+            // 숫자값 콤마(toLocaleString)를 위해 parse를 사용하여 숫자로 변경해 주었다.
+            <div className="rowDiv" key={mv.movieCd} onClick={() => handleDivClick(mv)}>
                 <span className="col" id="colrank">{mv.rank}</span>
                 <span className="col" id="colmovieNm">{mv.movieNm}</span>
-                <span className="col" id="colsalesAmt">{mv.salesAmt}</span>
-                <span className="col" id="colrankInten">{mv.rankInten}</span>
+                <span className="col" id="colsalesAmt">{parseInt(mv.salesAmt).toLocaleString('ko-KR')}</span>
+                <span className="col" id="colrankInten">{inten}</span>
             </div>
         )
     }
@@ -71,16 +93,20 @@ const Boxmain = () => {
     }
     */
 
-    // 순위, 영화명, 관객수, 증감율 화면에 찍기.
+    // 순위, 영화명, 관객수, 증감률 화면에 찍기.
     return (
         <div className="content">
-            <div className="rowDiv">
+            <div className="rowDiv0">
                 <span className="col" id="colrank">순위</span>
                 <span className="col" id="colmovieNm">영화명</span>
                 <span className="col" id="colsalesAmt">매출액</span>
                 <span className="col" id="colrankInten">증감률</span>
             </div>
             {divTags}
+            <div className="rowDay"><strong>
+                [{dspmv.movieNm}] 개봉일 : {dspmv.openDt}
+                </strong>
+            </div>
         </div>
     );
 }

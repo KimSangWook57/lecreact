@@ -21,7 +21,7 @@ h1 {
     height: 90vh;
 }
 
-.rowDiv {
+.rowDiv , .rowDiv0{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +29,15 @@ h1 {
     height: 7vh;
     border-bottom: 1px solid gray;
 }
+
+.rowDiv0 {
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+.rowDiv:hover, .rowDiv:active {
+    background-color: gainsboro;
+} 
 
 .col {
     display: inline-flex; /* 박스 스타일로 만드는 코드. */
@@ -51,3 +60,23 @@ h1 {
 #colrankInten {
     width: 10%;
 }
+
+.spup {
+    color: brown;
+}
+
+.spdown {
+    color: blue;
+}
+
+.rowDay { 
+    width: 60vw; 
+    height: 6vh;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
