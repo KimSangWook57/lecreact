@@ -14,10 +14,22 @@ const Boxmain = () => {
 
     // push를 10번 넣을 배열.
     let divTags = [];
+    for(let mv of mvlist) {
+        divTags.push(
+            <div className="rowDiv">
+                <span className="col" id="colrank">{mv.rank}</span>
+                <span className="col" id="colmovieNm">{mv.movieNm}</span>
+                <span className="col" id="colsalesAmt">{mv.salesAmt}</span>
+                <span className="col" id="colrankInten">{mv.rankInten}</span>
+            </div>
+        )
+    }
 
     // 순위, 영화명, 매출액, 증감율만 찍기.
     // 키 리스트를 만들어서 정해진 것만 접근하기.
-    const klist = ["rank", "movieNm", "salesAmt", "rankInten"]
+    // const klist = ["rank", "movieNm", "salesAmt", "rankInten"]
+
+    /*
     for(let item of mvlist) {
         // 임시 배열 생성.
         let temp = [];
@@ -57,6 +69,8 @@ const Boxmain = () => {
             
         // }
     }
+    */
+
     // 순위, 영화명, 관객수, 증감율 화면에 찍기.
     return (
         <div className="content">
