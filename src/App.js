@@ -1,5 +1,6 @@
 import './App.css'; // css
-import Box from './02/Box';
+// import Box from './02/Box';
+import Frcst from './04/Frcst';
 
 // 사용자 정의 태그는 반드시 대문자로 시작할 것.
 // 앱은 반드시 리턴이 있어야 한다. return ();
@@ -7,7 +8,8 @@ import Box from './02/Box';
 // 넣고 싶다면 빈 태그를 넣자.
 const App = () => {
   return (
-    <Box /> 
+    // <Box />
+    <Frcst /> 
   );
 }
 

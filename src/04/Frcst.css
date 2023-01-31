@@ -1,0 +1,89 @@
+@keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
+
+.header {
+    /* 기본적으로 중간에 정렬 */
+    display: flex;           /* 디폴트 - row */
+    justify-content: center; /* 디폴트 = 가로축정렬 */
+    align-items: center;     /* 디폴트 - 세로축정렬 */
+    /* 가로와 세로 길이 조정 */
+    width: 100vw;
+    height: 10vh;  
+    /* 추가사항 */
+    background-color: darkblue;
+    color: white;
+}
+
+h1 {
+    font-size: 5vh; /* 같이 줄어들도록 설정. */
+}
+
+.main { 
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 100vw;
+    height: 90vh; 
+    
+}
+
+.mainbox1, .mainbox2 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.mainbox1 {
+    width: 30vw;
+    height: 90vh; 
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.mainbox2 {
+    width: 50vw;
+    height: 90vh; 
+    justify-content: center;
+    align-items: top;
+}
+
+.dtdiv1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 10vh;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.dtdiv1:hover, .dtdiv1:active {
+    background-color: gray;
+    color: red;
+    font-size: 20px;
+}
+
+.detail {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    background-color: beige;
+    padding: 10px;
+}
+
+.detail > ul {
+    list-style-type: none;
+}
+
+.lired {
+    color: white;
+    background-color: red;
+    animation: blink-effect 1s step-end infinite;
+}
