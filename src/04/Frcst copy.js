@@ -1,8 +1,5 @@
 import './Frcst.css';
-import Frcheader from './Frcheader';
-import Frccn from './Frccn';
-import Frcdt from './Frcdt';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Frcst = () => {
     /* 공공데이터포털 : 한국환경공단_에어코리아_대기오염정보
@@ -17,7 +14,8 @@ const Frcst = () => {
     frcstFourDt : 넷째날예보일시
     */
 
-    
+    // const [변수명, set함수명] = useState(초기값);
+    const [info, setInfo] = useState("날짜를 클릭하세요.");
 
     const items = [
         {
@@ -33,71 +31,69 @@ const Frcst = () => {
         "presnatnDt":"2023-01-30"
         }
         ]
-
-    // 2개의 배열 만들기.
-    // 배열과 오브젝트를 선언한다.
-    let frcdt = [];
-    let frccn = [];
-    let frcobj = {};
-
-    let item = items[0];
-
-    // 키값을 배열에 먼저 넣어준다.
-    frcdt.push("frcstOneDt");
-    frcdt.push("frcstTwoDt");
-    frcdt.push("frcstThreeDt");
-    frcdt.push("frcstFourDt");
-
-    frccn.push("frcstOneCn");
-    frccn.push("frcstTwoCn");
-    frccn.push("frcstThreeCn");
-    frccn.push("frcstFourCn");
-    // 미리 지정해도 된다.
-    // let frcdt = ["frcstOneDt", "frcstTwoDt", "frcstThreeDt", "frcstFourDt"];
-    // let frccn = ["frcstOneCn", "frcstTwoCn", "frcstThreeCn", "frcstFourCn"];
-
-    // map()을 쓰지 않는 예시.
-    // let temp = [];
-    // for(let k of frcdt) {
-    //     temp.push(item[k]);
-    // }
-    // frcdt = temp;
-
-    // map()을 사용해 키값 기준으로 순서대로 정렬된 배열을 만든 뒤, 기존의 배열에 결과값을 넣어 준다.
-    frcdt = frcdt.map((k) => item[k]);
-    frccn = frccn.map((k) => item[k]);
     
-    // 일자별 예보 오브젝트 생성.
-    // 배열.entries => idx 추출
-    // frccn의 idx => 값 추출
-    for(let [idx, k] of frcdt.entries()) {
-        // console.log('idx=', idx, 'key(value)=', k, 'cnvalue=', frccn[idx]);
-        frcobj[k] = frccn[idx];
+    let item = items[0]
+    // console.log(item);    // 오브젝트가 안에 들어간다.
+
+    const showInfo = (seldt) => {
+        // console.log(seldt);
+
+        let infoArray = [];
+        
+        switch (seldt) {
+            case 1: infoArray = item.frcstOneCn.split(','); break;
+            case 2: infoArray = item.frcstTwoCn.split(','); break;
+            case 3: infoArray = item.frcstThreeCn.split(','); break;
+            case 4: infoArray = item.frcstFourCn.split(','); break;
+        }
+
+        // li 태그를 붙여주고, 키값을 백틱을 사용해서 붙여 주었다.
+        // case1 
+        // infoArray = infoArray.map((i) => <li key={i + '-' + seldt}>{i}</li>
+        // case2
+        // 중괄호로 감싸주어야 자바스크립트 문법인 백틱을 사용할 수 있다.
+        // infoArray = infoArray.map((i) => <li key={`${i}-${seldt}`} className="lired">{i}</li>)
+        // case3
+        // 삼항연산자와 includes를 사용하여 높음에만 빨간색을 달아 준다.
+        // case1. 전체 부분에 빨강 적용.
+        // i.includes('높음') ? 
+        // <li key={`${i}-${seldt}`} style={{color:'red'}}>{i}</li> : 
+        // <li key={`${i}-${seldt}`} >{i}</li>
+        // case2.
+        infoArray = infoArray.map((i) => 
+            <li key={`${i}-${seldt}`}>
+                <span>{i.split(':')[0]}</span>
+                {
+                i.includes('높음') ?
+                <span className="lired">{i.split(':')[1]}</span> 
+                : 
+                <span>{i.split(':')[1]}</span>    
+                }            
+            </li>
+        );
+        console.log(infoArray)
+        setInfo(infoArray);
     }
 
-    // 안쪼개지나????
-    // frcobj = {...frcdt, ...frccn};
-
-    // console.log(frcdt);
-    // console.log(frccn);
-    // console.log(frcobj);
-
-    // dt를 바꾸는 함수를 속성값으로 보낸 것이다.
-    let [dt, setDt] = useState();
-    let [cn, setCn] = useState(frcobj["2023-02-02"]);
-    // 하위 컴포넌트의 값을 상위 컴포넌트로 올리는 방법.
-    useEffect(() => {
-        console.log(frcobj[dt]);  // 이 값으로 바꿔주어야 한다.
-        frcobj[dt] && setCn(frcobj[dt]);
-    }, [dt]);
     return (
          <>
-            <Frcheader />
-            <div className="main">
-                <Frcdt dt={frcdt} setDt={setDt}/>
-                <Frccn cn={cn}/>
+            <div className="header">
+                <h1>미세먼지예보</h1>
             </div>
-            
+            <div className="main">
+                <div className="mainbox1">
+                    <div className="dtdiv1" onClick={() => showInfo(1)}>{item.frcstOneDt}</div>
+                    <div className="dtdiv1" onClick={() => showInfo(2)}>{item.frcstTwoDt}</div>
+                    <div className="dtdiv1" onClick={() => showInfo(3)}>{item.frcstThreeDt}</div>
+                    <div className="dtdiv1" onClick={() => showInfo(4)}>{item.frcstFourDt}</div>
+                </div>
+                <div className="mainbox2">
+                    <div className="detail">
+                        <ul>{info}</ul>
+                    </div>
+                    
+                </div>
+            </div>
          </>
     ) ;
 }
