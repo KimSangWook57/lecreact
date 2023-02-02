@@ -1,5 +1,6 @@
 import './App.css'; // css
 // import Box from './02/Box';
+//import Mydiv from './03/Mydiv';
 import Frcst from './04/Frcst';
 
 // 사용자 정의 태그는 반드시 대문자로 시작할 것.
@@ -9,6 +10,7 @@ import Frcst from './04/Frcst';
 const App = () => {
   return (
     // <Box />
+    // <Mydiv />
     <Frcst /> 
   );
 }

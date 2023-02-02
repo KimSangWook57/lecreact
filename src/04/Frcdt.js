@@ -1,12 +1,13 @@
 // probs를 주지 않는 방법.
 // 입력값에 직접 {}을 지정해 준다.
-const Frcdt = ({dt, setDt}) => {
+const Frcdt = ({frcdt, setDt}) => {
 
-    let dtdiv1Tag = [...dt];
+    let dtdiv1Tag = [...frcdt];
     // console.log("setDt= ", setDt)  //function 형태.
 
     const show  = (v) => {
-        // console.log(v);
+        // 날짜값
+        console.log(v);
         setDt(v);
     }
 

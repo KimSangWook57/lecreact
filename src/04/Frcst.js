@@ -89,13 +89,17 @@ const Frcst = () => {
     useEffect(() => {
         console.log(frcobj[dt]);  // 이 값으로 바꿔주어야 한다.
         frcobj[dt] && setCn(frcobj[dt]);
+        // if (!dt === undefined) {
+        //     setCn(frcobj[dt]);
+        // }
     }, [dt]);
     return (
          <>
             <Frcheader />
             <div className="main">
-                <Frcdt dt={frcdt} setDt={setDt}/>
-                <Frccn cn={cn}/>
+                <Frcdt frcdt={frcdt} setDt={setDt}/>
+                {/* dt가 고정되어야 코드가 로딩된다. */}
+                {dt && <Frccn dt={dt} cn={cn}/>}
             </div>
             
          </>
