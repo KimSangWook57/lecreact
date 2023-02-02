@@ -76,5 +76,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 + 2023.01.30 : 박스오피스 클릭이벤트 작성.
 + 2023.01.31 : 미세먼지예보 초안 작성.
 + 2023.02.01 : 미세먼지예보 컴포넌트 나누기.
++ 2023.02.02 : 미세먼지예보 코드 정리.
 
 + 자기소개 호스팅 주소 : https://reactclock-15769.web.app
