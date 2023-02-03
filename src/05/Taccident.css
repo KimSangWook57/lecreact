@@ -1,0 +1,82 @@
+.header {
+    /* 기본적으로 중간에 정렬 */
+    display: flex;           /* 디폴트 - row */
+    justify-content: center; /* 디폴트 = 가로축정렬 */
+    align-items: center;     /* 디폴트 - 세로축정렬 */
+    /* 가로와 세로 길이 조정 */
+    width: 100vw;
+    height: 10vh;  
+    /* 추가사항 */
+    background-color: darkblue;
+    color: white;
+}
+
+h1 {
+    font-size: 5vh; /* 같이 줄어들도록 설정. */
+}
+
+.main { 
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    width: 100vw;
+    height: 90vh; 
+    
+}
+
+.tc1, .tc2, .tdata {
+    height: 90vh;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.tc1 {
+    width: 15vw;
+}
+
+.tc2 {
+    width: 15vw;
+}
+
+.tdata {
+    width: 50vw;
+}
+
+.tc1 > h2, .tc2 > h2 {
+    width: 15vw;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.tdata > h2 {
+    width: 50vw;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center; 
+}
+
+.tcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 10vh;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.tcard:hover, .tcard:active {
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
