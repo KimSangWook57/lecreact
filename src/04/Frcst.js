@@ -17,8 +17,6 @@ const Frcst = () => {
     frcstFourDt : 넷째날예보일시
     */
 
-    
-
     const items = [
         {
         "frcstFourDt":"2023-02-05",
@@ -74,9 +72,6 @@ const Frcst = () => {
         // console.log('idx=', idx, 'key(value)=', k, 'cnvalue=', frccn[idx]);
         frcobj[k] = frccn[idx];
     }
-
-    // 안쪼개지나????
-    // frcobj = {...frcdt, ...frccn};
 
     // console.log(frcdt);
     // console.log(frccn);

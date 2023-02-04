@@ -7,11 +7,14 @@ import { useState, useEffect } from 'react';
 
 const Taccidentm = ({c1, c2, data}) => {
 
-    // console.log(c1)
-    // console.log(c2)
-    // console.log(data)
+    console.log(c1)
+    console.log(c2)
+    console.log(data)
 
-    
+    // c1을 클릭하면 c1의 값에 따른 c2의 리스트가 나타나게 한다.
+
+    // c2를 클릭하면 c2에 값에 지정된 data가 나타나게 한다.
+
     return (
         <>
             <Theader />
