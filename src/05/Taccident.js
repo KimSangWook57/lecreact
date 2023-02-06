@@ -149,14 +149,14 @@ const Taccident = () => {
     // 자바스크립트 object는 키와 값으로 분리 가능. 
     let objK = Object.keys(apiData); // 배열
     let objV = Object.values(apiData); // 배열
-    console.log("Object 키", objK);
-    console.log("Object 값", objV);
+    // console.log("Object 키", objK);
+    // console.log("Object 값", objV);
 
     // 분해한 배열에 map과 filter를 쓸 수 있다.
     // map 예시.
     let newV;
     newV = objK.map((k) => apiData[k])
-    console.log("새로운 배열", newV) // objV = newV
+    // console.log("새로운 배열", newV) // objV = newV
 
     // map과 filter 예시.
     let data;
@@ -164,19 +164,19 @@ const Taccident = () => {
     data = objK.filter((item) => item === 'data')
     // 2차 데이터 정제.
     data = data.map((k) => apiData[k])
-    console.log("필터로 데이터 추출", data)
+    // console.log("필터로 데이터 추출", data)
 
     // 오브젝트 키로 접근.
     data = apiData.data;
-    console.log("오브젝트 키로 data 추출1", data)
+    // console.log("오브젝트 키로 data 추출1", data)
     data = apiData['data'];
-    console.log("오브젝트 키로 data 추출2", data)
+    // console.log("오브젝트 키로 data 추출2", data)
 
     // 대분류를 추출.
     let c1 = data.map((item) => item.사고유형_대분류);
-    console.log("대분류 추출 1단계", c1);
+    // console.log("대분류 추출 1단계", c1);
     c1 = [...new Set(c1)];
-    console.log("대분류 추출 2단계 / Set으로 중복 제거 및 Array로 변환.", c1);
+    // console.log("대분류 추출 2단계 / Set으로 중복 제거 및 Array로 변환.", c1);
 
     // 중분류를 추출.
     // case1
@@ -189,25 +189,25 @@ const Taccident = () => {
     let c2 = data.map((item) => 
         [item.사고유형_대분류, item.사고유형_중분류]
     );
-    console.log("중분류 map으로 추출2", c2);
+    // console.log("중분류 map으로 추출2", c2);
 
     // entries 예시.
-    for(let [k, v] of c2.entries()) {
-        console.log("k", k, "\nv", v)
-    }
+    // for(let [k, v] of c2.entries()) {
+    //     console.log("k", k, "\nv", v)
+    // }
 
     // 배열을 오브젝트로.
     let c1_1 = data.map((item) => item.사고유형_대분류);
     let c2_1 = data.map((item) => item.사고유형_중분류);
-    console.log(c1_1);
-    console.log(c2_1);
+    // console.log(c1_1);
+    // console.log(c2_1);
     // 중분류로 대분류를 엮는다.
     let cobj = {};
     for(let [k, v] of c2_1.entries()) {
         cobj[v] = c1_1[k];
     }
     // 이 방법을 쓰면 기타 부분이 날아가게 된다.
-    console.log("cobj", cobj);
+    // console.log("cobj", cobj);
 
     // 과제.
     // {'차대사람' : ['횡단중', '차도통행중', '길가장자리구역통행중', '보도통행중', '기타']}
@@ -241,7 +241,7 @@ const Taccident = () => {
     // // console.log(c1);
     
     return (
-          <Taccidentm c1={c1} c2={c2} data={data}/>
+        <Taccidentm c1={c1} c2={c2} data={data} />
     ) ;
 }
 

@@ -17,8 +17,6 @@ const Frcst = () => {
     frcstFourDt : 넷째날예보일시
     */
 
-    
-
     const items = [
         {
         "frcstFourDt":"2023-02-05",

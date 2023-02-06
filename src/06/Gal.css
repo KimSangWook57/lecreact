@@ -1,0 +1,74 @@
+.header {
+	/* 기본적으로 중간에 정렬 */
+	display: flex;           /* 디폴트 - row */
+	justify-content: center; /* 디폴트 = 가로축정렬 */
+	align-items: center;     /* 디폴트 - 세로축정렬 */
+	/* 가로와 세로 길이 조정 */
+	width: 100vw;
+	height: 10vh;  
+	/* 추가사항 */
+	background-color: darkblue;
+	color: white;
+}
+
+h1 {
+	font-size: 5vh; /* 같이 줄어들도록 설정. */
+}
+
+.main { 
+	display: flex;
+	justify-content: left;
+	align-items: top;
+	width: 100vw;
+	height: 90vh; 
+	background-color: beige;
+}
+
+.gtitle, .gdata {
+	width: 40vw;
+	height: 90vh;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+	align-items: center;
+}
+
+.glist, .glistSel {
+	width: 30vw;
+	height: 8vh;
+	border: 2px solid gray;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+.glist:hover, .glist:active, .glistSel{
+	color: brown;
+	background-color: rgb(170, 169, 169);
+	font-size: 20px;
+	font-weight: bold;
+	padding: 5px;
+}
+.galTitle {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.galWebImageUrl {
+	width: 50vw;
+	height: 60vh;
+}
+
+ul {
+	list-style: none;
+	width: 100%;
+}
+
+ul > li {
+	display: flex;
+	margin: 4px;
+	color: navy;
+}

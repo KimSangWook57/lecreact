@@ -63,7 +63,7 @@ h1 {
     align-items: center; 
 }
 
-.tcard{
+.tcard, .tcardSel{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,11 +72,54 @@ h1 {
     border: 1px solid gray;
     border-radius: 8px;
     margin: 10px;
+    
 }
 
-.tcard:hover, .tcard:active {
+.tcard:hover, .tcard:active, .tcardSel {
     background-color: darkblue;
     color: white;
     font-size: 20px;
     font-weight: bold;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+    width: 100%;
+}
+
+ul > li {
+    display: flex;
+    margin: 2px;
+}
+
+.sp1, .sp1_1, .sp2, .sp2_1 {
+    display: inline-flex;
+    justify-self: center;
+    align-items: center;
+    width: 50%;
+    height: 40px;
+    margin: 5px;
+}
+.sp1, .sp1_1 {
+    align-items: center;
+}
+
+.sp1 {
+    background-color: darkblue;
+    color: white;
+}
+
+.sp1_1 {
+    background-color: darkred;
+    color: white;
+}
+
+.sp2, .sp2_1 { 
+    justify-content: left;
+
+}
+
+.sp2_1 { 
+    color: red;
 }
