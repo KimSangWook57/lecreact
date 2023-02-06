@@ -156,7 +156,7 @@ const Taccident = () => {
     // map 예시.
     let newV;
     newV = objK.map((k) => apiData[k])
-    // console.log("새로운 배열", newV) // objV = newV
+    console.log("새로운 배열", newV) // objV = newV
 
     // map과 filter 예시.
     let data;
@@ -196,6 +196,7 @@ const Taccident = () => {
     //     console.log("k", k, "\nv", v)
     // }
 
+    // 과제를 위한 설명.
     // 배열을 오브젝트로.
     let c1_1 = data.map((item) => item.사고유형_대분류);
     let c2_1 = data.map((item) => item.사고유형_중분류);

@@ -73,9 +73,6 @@ const Frcst = () => {
         frcobj[k] = frccn[idx];
     }
 
-    // 안쪼개지나????
-    // frcobj = {...frcdt, ...frccn};
-
     // console.log(frcdt);
     // console.log(frccn);
     // console.log(frcobj);
