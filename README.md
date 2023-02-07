@@ -1,3 +1,18 @@
+# React 연습.
+
++ 2023.01.26 : React 생성 및 자기소개.
++ 2023.01.27 : 박스오피스 초안 작성.
++ 2023.01.30 : 박스오피스 클릭이벤트 작성.
++ 2023.01.31 : 미세먼지예보 초안 작성.
++ 2023.02.01 : 미세먼지예보 컴포넌트 나누기.
++ 2023.02.02 : 미세먼지예보 코드 정리.
++ 2023.02.03 : 교통사고현황 초안 작성.
++ 2023.02.06 : 한국관광공사 안내 페이지 작성.
+
++ 자기소개 호스팅 주소 : https://reactclock-15769.web.app
++ 관광공사 호스팅 주소 : https://galdata-f94a4.web.app
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,14 +84,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# React 연습.
-
-+ 2023.01.26 : React 생성 및 자기소개.
-+ 2023.01.27 : 박스오피스 초안 작성.
-+ 2023.01.30 : 박스오피스 클릭이벤트 작성.
-+ 2023.01.31 : 미세먼지예보 초안 작성.
-+ 2023.02.01 : 미세먼지예보 컴포넌트 나누기.
-+ 2023.02.02 : 미세먼지예보 코드 정리.
-+ 2023.02.03 : 교통사고현황 초안 작성.
-
-+ 자기소개 호스팅 주소 : https://reactclock-15769.web.app
