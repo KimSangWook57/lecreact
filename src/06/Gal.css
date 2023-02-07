@@ -27,7 +27,6 @@ h1 {
 .gtitle, .gdata {
 	width: 40vw;
 	height: 90vh;
-	margin: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: top;
@@ -42,7 +41,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 10px;
+	margin: 15px;
 }
 
 .glist:hover, .glist:active, .glistSel{
