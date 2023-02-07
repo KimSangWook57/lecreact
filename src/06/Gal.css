@@ -1,3 +1,4 @@
+
 .header {
 	/* 기본적으로 중간에 정렬 */
 	display: flex;           /* 디폴트 - row */
@@ -25,17 +26,26 @@ h1 {
 }
 
 .gtitle, .gdata {
-	width: 40vw;
-	height: 90vh;
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: top;
 	align-items: center;
 }
+.gtitle {
+	width: 40vw;
+	height: 80vh;
+	border: 1px solid gray;
+	margin: 20px;
+}
+.gdata {
+	width: 50vw;
+	height: 90vh;
+}
 
 .glist, .glistSel {
 	width: 30vw;
-	height: 8vh;
+	height: 7vh;
 	border: 2px solid gray;
 	border-radius: 10px;
 	display: flex;
@@ -57,7 +67,7 @@ h1 {
 }
 
 .galWebImageUrl {
-	width: 50vw;
+	width: 40vw;
 	height: 60vh;
 }
 
