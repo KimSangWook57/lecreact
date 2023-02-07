@@ -26,18 +26,19 @@ h1 {
 }
 
 .gtitle, .gdata {
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: top;
 	align-items: center;
 }
+/* 제목 부분을 테두리로 감싸 주었다. */
 .gtitle {
 	width: 40vw;
 	height: 80vh;
-	border: 1px solid gray;
+	border: 1px solid darkgreen;
 	margin: 20px;
 }
+
 .gdata {
 	width: 50vw;
 	height: 90vh;
@@ -61,13 +62,14 @@ h1 {
 	font-weight: bold;
 	padding: 5px;
 }
+/* 제목만 조금 키웠다. */
 .galTitle {
 	font-size: 30px;
 	font-weight: bold;
 }
-
+/* 그림 크기 설정. */
 .galWebImageUrl {
-	width: 40vw;
+	width: 50vw;
 	height: 60vh;
 }
 

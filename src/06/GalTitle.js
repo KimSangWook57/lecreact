@@ -2,8 +2,9 @@ const GalTitle = ({ gtitle, selTitle, setSelTitle }) => {
 
   let listTag = [...gtitle];
 
+  // 제목을 클릭하면 선택된 제목으로 값이 바뀌게 된다.
   const selectList = (i) => {
-    console.log(i);
+    // console.log("selTitle", i);
     setSelTitle(i);
   }
 

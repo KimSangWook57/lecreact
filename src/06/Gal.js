@@ -128,10 +128,11 @@ const Gal = () => {
     }
   }
 
+  // 사용할 데이터를 위치를 활용해서 가져오기.
   let item = galData.response.body.items.item;
   // console.log(item);
 
-  // 제목 버튼에 담을 데이터.
+  // 화면 왼쪽(제목 버튼)에 담을 데이터.
   let gtitle = item.map((item) => item.galTitle);
   // console.log(gtitle);
 
