@@ -22,20 +22,20 @@ h1 {
 .main {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: top;
 	width: 100vw;
 	height: 90vh;
 	background-color: beige;
 }
 
 .Lmain {
-	width: 35vw;
+	width: 40vw;
 	height: 80vh;
-	margin: 20px 10px;
 	flex-direction: column;
 	display: flex;
 	justify-content: right;
 	align-items: top;
+	margin: 20px 10px;
 }
 
 .Rmain {
@@ -43,11 +43,12 @@ h1 {
 	height: 80vh;
 	margin: 10px;
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: top;
+	margin: 10px;
 }
 
-/* .gtitle, .gdata, .selectbar {
+.gtitle, .gdata, .selectbar {
 	display: flex;
 	flex-direction: column;
 	justify-content: top;
@@ -55,14 +56,15 @@ h1 {
 }
 
 .selectbar {
-	width: 150px;
+	width: 40vw;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-} */
-
+}
 
 input[type=text] {
+	width: 20vw;
+	height: 5vh;
 	margin: 8px 0;
 	box-sizing: border-box;
 }
