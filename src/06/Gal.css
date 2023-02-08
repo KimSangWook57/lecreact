@@ -1,42 +1,94 @@
-
 .header {
 	/* 기본적으로 중간에 정렬 */
-	display: flex;           /* 디폴트 - row */
-	justify-content: center; /* 디폴트 = 가로축정렬 */
-	align-items: center;     /* 디폴트 - 세로축정렬 */
+	display: flex;
+	/* 디폴트 - row */
+	justify-content: center;
+	/* 디폴트 = 가로축정렬 */
+	align-items: center;
+	/* 디폴트 - 세로축정렬 */
 	/* 가로와 세로 길이 조정 */
 	width: 100vw;
-	height: 10vh;  
+	height: 10vh;
 	/* 추가사항 */
 	background-color: darkblue;
 	color: white;
 }
 
 h1 {
-	font-size: 5vh; /* 같이 줄어들도록 설정. */
+	font-size: 5vh;
+	/* 같이 줄어들도록 설정. */
 }
 
-.main { 
+.main {
 	display: flex;
-	justify-content: left;
-	align-items: top;
+	justify-content: center;
+	align-items: center;
 	width: 100vw;
-	height: 90vh; 
+	height: 90vh;
 	background-color: beige;
 }
 
-.gtitle, .gdata {
+.Lmain {
+	width: 35vw;
+	height: 80vh;
+	margin: 20px 10px;
+	flex-direction: column;
+	display: flex;
+	justify-content: right;
+	align-items: top;
+}
+
+.Rmain {
+	width: 50vw;
+	height: 80vh;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: top;
+}
+
+/* .gtitle, .gdata, .selectbar {
 	display: flex;
 	flex-direction: column;
 	justify-content: top;
 	align-items: center;
 }
+
+.selectbar {
+	width: 150px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+} */
+
+
+input[type=text] {
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+button {
+	border: none;
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 30px;
+	margin: 5px;
+	display: inline-flex;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+button:hover, button:active {
+	background-color: blue;
+}
+
+
 /* 제목 부분을 테두리로 감싸 주었다. */
 .gtitle {
 	width: 40vw;
-	height: 80vh;
+	height: 60vh;
 	border: 1px solid darkgreen;
-	margin: 20px;
 }
 
 .gdata {
@@ -44,7 +96,8 @@ h1 {
 	height: 90vh;
 }
 
-.glist, .glistSel {
+.glist,
+.glistSel {
 	width: 30vw;
 	height: 7vh;
 	border: 2px solid gray;
@@ -55,18 +108,22 @@ h1 {
 	margin: 15px;
 }
 
-.glist:hover, .glist:active, .glistSel{
+.glist:hover,
+.glist:active,
+.glistSel {
 	background-color: #d3d3d3;
 	font-size: 20px;
 	font-weight: bold;
 	padding: 5px;
 }
+
 /* 제목만 조금 키웠다. */
 .galTitle {
 	color: crimson;
 	font-size: 30px;
 	font-weight: bold;
 }
+
 /* 그림 크기 설정. */
 .galWebImageUrl {
 	width: 50vw;
@@ -78,7 +135,7 @@ ul {
 	width: 100%;
 }
 
-ul > li {
+ul>li {
 	display: flex;
 	margin: 4px;
 	color: navy;

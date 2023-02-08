@@ -1,6 +1,6 @@
-const GalTitle = ({ gtitle, selTitle, setSelTitle }) => {
+const GalTitle = ({ stxt1, selTitle, setSelTitle }) => {
 
-  let listTag = [...gtitle];
+  let listTag = [...stxt1];
 
   // 제목을 클릭하면 선택된 제목으로 값이 바뀌게 된다.
   const selectList = (i) => {
