@@ -22,20 +22,20 @@ h1 {
 .main {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: top;
 	width: 100vw;
 	height: 90vh;
 	background-color: beige;
 }
 
 .Lmain {
-	width: 35vw;
+	width: 40vw;
 	height: 80vh;
-	margin: 20px 10px;
 	flex-direction: column;
 	display: flex;
 	justify-content: right;
 	align-items: top;
+	margin: 20px 10px;
 }
 
 .Rmain {
@@ -43,26 +43,45 @@ h1 {
 	height: 80vh;
 	margin: 10px;
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: top;
+	margin: 10px;
 }
 
-/* .gtitle, .gdata, .selectbar {
+.gtitle, .gdata, .selectbar {
 	display: flex;
 	flex-direction: column;
-	justify-content: top;
 	align-items: center;
 }
 
+/* 제목 부분을 테두리로 감싸 주었다. */
+.gtitle {
+	justify-content: top;
+	width: 40vw;
+	height: 60vh;
+	border: 1px solid darkgreen;
+}
+
+.gdata {
+	justify-content: top;
+	width: 400px;
+	height: 400px;
+	background-color: rgb(139, 139, 167);
+	border-radius: 10px;
+	margin: 10px;
+}
+
 .selectbar {
-	width: 150px;
+	justify-content: top;
+	width: 40vw;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-} */
-
+}
 
 input[type=text] {
+	width: 20vw;
+	height: 5vh;
 	margin: 8px 0;
 	box-sizing: border-box;
 }
@@ -81,19 +100,6 @@ button {
 
 button:hover, button:active {
 	background-color: blue;
-}
-
-
-/* 제목 부분을 테두리로 감싸 주었다. */
-.gtitle {
-	width: 40vw;
-	height: 60vh;
-	border: 1px solid darkgreen;
-}
-
-.gdata {
-	width: 50vw;
-	height: 90vh;
 }
 
 .glist,
@@ -126,8 +132,8 @@ button:hover, button:active {
 
 /* 그림 크기 설정. */
 .galWebImageUrl {
-	width: 50vw;
-	height: 60vh;
+	width: 150px;
+	height: 150px;
 }
 
 ul {
@@ -136,7 +142,15 @@ ul {
 }
 
 ul>li {
+	width: 25vw;
 	display: flex;
 	margin: 4px;
 	color: navy;
+}
+
+select {
+	width: 20vw;
+	height: 5vh;
+	margin: 8px 0;
+	box-sizing: border-box;
 }

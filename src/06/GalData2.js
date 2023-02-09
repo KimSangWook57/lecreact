@@ -1,4 +1,4 @@
-const GalData = ({ selData }) => {
+const GalData2 = ({ selData }) => {
   // console.log("gdata", selData)
   let dTag;
   // 글씨를 넣을 키값을 먼저 설정했다.
@@ -34,4 +34,4 @@ const GalData = ({ selData }) => {
   );
 }
 
-export default GalData;
+export default GalData2;
