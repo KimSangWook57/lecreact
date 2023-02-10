@@ -6,7 +6,7 @@ const W1 = () => {
 
     // console.log("weather1", weather1)
     // console.log("keys", keys)
-    
+
     let items = weather1.response.body.items.item;
     // console.log("items", items)
     // 카테고리 추출.
@@ -20,19 +20,21 @@ const W1 = () => {
         return temp;
     })
     console.log("w1", w1)
-    
+
     // 배열을 돌며 내용 찍기.
-    // let w1txt = 
+    let w1tag = w1.map((v) =>
+        <div className="w1div">
+            <span classname={v}>{v[0]}</span>
+            <span classname={v}>{v[1]}</span>
+            <span classname={v}>{v[2]}</span>
+        </div>
+    )
 
     return (
         <>
             <Wheader title={"단기정보"} />
             <div className="main">
-                <div className="w1div">
-                    <span className="sp0">강수량</span> 
-                    <span className="sp1">0</span>
-                    <span className="sp2">mm</span>
-                </div>
+                {w1tag}
             </div>
         </>
     )
