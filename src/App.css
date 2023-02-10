@@ -44,6 +44,5 @@ a {
 }
 
 a:hover, a:link, a:active {
-  background-color: #282c34;
   color: white;
 }

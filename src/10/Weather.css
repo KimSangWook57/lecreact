@@ -1,0 +1,50 @@
+* {
+    padding: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 640px;
+    height: 10vh;
+    background-color: blueviolet;
+    color: white;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 640px;
+    height: 100vh;
+    background-color: beige;
+    margin: 0px;
+}
+
+h1 {
+	font-size: 5vh;
+	/* 같이 줄어들도록 설정. */
+}
+
+.whdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+}
+
+
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border: 1px solid gray;
+    width: 100px;
+    list-style-type: none;
+    padding: 20px;
+    margin: 30px;
+}

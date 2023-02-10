@@ -7,7 +7,8 @@ import './App.css'; // css
 // import GalSelect from './06/GalSelect';
 // import Mycom from './07/Mycom';
 // import Myform from './08/Myform';
-import RouteMain from './09/RouteMain';
+// import RouteMain from './09/RouteMain';
+import Wmain from './10/Wmain';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -26,7 +27,8 @@ const App = () => {
     // <Mycom />
     // <Myform />
     <BrowserRouter>
-      <RouteMain />
+    {/* <RouteMain /> */}
+      <Wmain />
     </BrowserRouter>
   );
 }
