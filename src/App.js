@@ -8,7 +8,9 @@ import './App.css'; // css
 // import Mycom from './07/Mycom';
 // import Myform from './08/Myform';
 // import RouteMain from './09/RouteMain';
-import Wmain from './10/Wmain';
+// import Wmain from './10/Wmain';
+// import Async from './11/Async';
+import Boxoffice from './11/Boxoffice';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -28,7 +30,9 @@ const App = () => {
     // <Myform />
     <BrowserRouter>
     {/* <RouteMain /> */}
-      <Wmain />
+    {/* <Wmain /> */}
+    {/* <Async /> */}
+    <Boxoffice />
     </BrowserRouter>
   );
 }

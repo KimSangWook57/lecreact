@@ -11,8 +11,8 @@ const Wmain = () => {
         <>
             <Routes>
                 <Route path="/" element={<Wmenu />} />
-                <Route path="/w1/" element={<W1 />} />
-                <Route path="/w2/" element={<W2 />} />
+                <Route path="/w1" element={<W1 />} />
+                <Route path="/w2" element={<W2 />} />
             </Routes>
         </>
     )
