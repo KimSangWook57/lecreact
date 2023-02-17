@@ -11,6 +11,8 @@ import './App.css'; // css
 // import Wmain from './10/Wmain';
 // import Async from './11/Async';
 import Boxoffice from './11/Boxoffice';
+// post(비공개) 방식으로 날아가는 예시.
+// import AIHubWiki from
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -32,8 +34,11 @@ const App = () => {
     {/* <RouteMain /> */}
     {/* <Wmain /> */}
     {/* <Async /> */}
+    {/* <AIHubWiki /> */}
     <Boxoffice />
     </BrowserRouter>
+
+
   );
 }
 
