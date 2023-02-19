@@ -15,18 +15,19 @@
     align-items: center;
 }
 
-.mvh > h1, .mvh > form {
+.mvh>h1,
+.mvh>form {
     display: flex;
     justify-content: center;
-    
+
 }
 
-.mvh > h1 {
+.mvh>h1 {
     width: 70%;
     align-items: center;
 }
 
-.mvh > form {
+.mvh>form {
     width: 30%;
     align-items: left;
 }
@@ -38,48 +39,105 @@ input[type=date] {
     box-sizing: border-box;
 }
 
-/* .mvh > form > input {
-    width: 150px;
-    display: inline-flex;
-    justify-content: left;
-    align-items: left;
-} */
+.mvcontent {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: top;  
+}
+
+.mvlist, .mvdetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mvdetail {
+    justify-content: center;
+    align-items: top;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    align-items: top;
+    height: 100%;
+    margin: 60px 0px;
+    border: 1px solid gray;
+    background-color: aliceblue;
+}
+
+.dtdiv {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.dtsp1 {
+    width: 20%;
+    display: inline-flex; 
+    font-weight: bold;
+    color: gray;
+    justify-content: right;
+}
+
+.dtsp2 {
+    width: 80%;
+    display: inline-flex;  
+    color: blue; 
+}
+
+.mvlist {
+    width: 100%;
+    margin: 10px 0px;
+    flex-direction: column;
+}
 
 .mvrowtitle01 {
-    margin: 20px;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.col0 {
-    width: 15vw;
-    height: 10vh;
-
-    background-color: darkblue;
+    background-color:cornflowerblue;
     color: white;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
-.rowDiv1 {
-    margin: 20px;
-    width: 50%;
-    height: 10vh;
-
-    background-color: green;
-    color: white;
-
+.rowDiv1, .mvrowtitle01 {
     display: flex;
-    justify-content: center;
+    width: 50vw;
+    height: 50px;
+    border-bottom: 1px solid gainsboro;
+    justify-content: space-between;
     align-items: center;
+
 }
 
-.rowDiv1:hover, .rowDiv1:active {
+.rowDiv1:hover,
+.rowDiv1:active {
     background-color: yellowgreen;
 }
+
+.mvrowtitle01 > span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.mvcol1, .mvcol2, .mvcol3 {
+    display: inline-flex;
+    border: 10px;
+}
+
+
+.mvcol1 {
+    width : 15% ;
+    
+}
+
+.mvcol2 {
+    width : 65% ;
+   
+}
+
+.mvcol3 {
+    width : 20% ;
+  
+}
+
+
+

@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 
 const BoxOfficeDetail = ({ mvcd }) => {
-    //console.log(mvcd);
+    console.log(mvcd);
     const [mTag, setMTag] = useState();
 
     const getData = async () => {
-        let url = `http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?`;
-        url = url + `key=f5eef3421c602c6cb7ea224104795888&`;
+        let url = `http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=f5eef3421c602c6cb7ea224104795888&`;
         url = url + `movieCd=${mvcd}`;
 
         try {
             const resp = await fetch(url);
             const data = await resp.json();
+
             console.log("url", url)
             // 오브젝트는 map을 쓸 수 없다.
             let temp = data.movieInfoResult.movieInfo;
@@ -28,7 +28,7 @@ const BoxOfficeDetail = ({ mvcd }) => {
                 let tag = []
                 for (let [k, v] of Object.entries(keys)) {
                     // 감독은 좀 더 들어가서 정보를 찾아야 한다.
-                    if (k === '감독') {
+                    if (k === "감독") {
                         tag.push(<div className="dtdiv" key={k}>
                             <span className="dtsp1">{k}</span>
                             <span className="dtsp2">{temp[v][0].peopleNm}</span>
@@ -50,8 +50,6 @@ const BoxOfficeDetail = ({ mvcd }) => {
         catch (err) {
             console.log(err)
         }
-
-
 
     }
 

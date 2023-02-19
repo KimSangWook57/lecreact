@@ -20,13 +20,15 @@ const BoxofficeList = ({ targetDt }) => {
         url = url + `key=${apikey}&`;
         url = url + `targetDt=${targetDt}`;
 
-        console.log(url);
+        // console.log(url);
         fetch(url)
             .then((resp) => resp.json())
             // 데이터 처리.
             .then((data) => {
-                console.log(data.boxOfficeResult.dailyBoxOfficeList);
+
+                // console.log(data.boxOfficeResult.dailyBoxOfficeList);
                 let temp = data.boxOfficeResult.dailyBoxOfficeList;
+                console.log(temp);
                 // 바로 집어넣기.
                 setMvlist(
                     temp.map((item) =>
@@ -60,20 +62,25 @@ const BoxofficeList = ({ targetDt }) => {
     // console.log(targetDt);
 
     return (
-
         <div className="mvcontent">
-            <div className="mvrowtitle01">
-                <span className="col0">순위</span>
-                <span className="col0">영화명</span>
-                <span className="col0">관객수</span>
+            <div className="mvlist">
+            <strong>
+                <div className="mvrowtitle01">
+                    <span className="mycol1">순위</span>
+                    <span className="mycol2">영화명</span>
+                    <span className="mycol3">관객수</span>
+                    
+                </div>
+                {mvlist}
+            </strong>
             </div>
-            {mvlist}
-            <div>
+            <div className="mvdetail">
+            <strong>
                 {mvcd && <BoxOfficeDetail mvcd={mvcd} />}
+            </strong>
             </div>
         </div>
+    );
 
-
-    )
 };
 export default BoxofficeList;
