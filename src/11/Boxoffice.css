@@ -60,7 +60,7 @@ input[type=date] {
     padding: 10px;
     align-items: top;
     height: 100%;
-    margin: 60px 0px;
+    margin: 30px 30px 0px;
     border: 1px solid gray;
     background-color: aliceblue;
 }
