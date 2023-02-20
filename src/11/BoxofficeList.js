@@ -16,7 +16,7 @@ const BoxofficeList = ({ targetDt }) => {
     // 재렌더링은 변수가 바뀌는 순간!
     useEffect(() => {
         let apikey = '08eb39f2d6bb2f36c231cde06bc1dc33';
-        let url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?`;
+        let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?`;
         url = url + `key=${apikey}&`;
         url = url + `targetDt=${targetDt}`;
 
